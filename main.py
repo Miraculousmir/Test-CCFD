@@ -245,7 +245,7 @@ def main():
 
                             customer_transaction['TX_FRAUD'] = prediction[0]
                             st.table(customer_transaction)
-                            data = pd.read_csv("transactions.csv")
+                            data = pd.read_csv("newTransactions.csv")
                             new_transaction_df = pd.concat([data, customer_transaction], axis=0, join='inner')
                             new_transaction_df.to_csv('newTransactions.csv', index=False)
                 elif task == "Blacklist Terminals":
